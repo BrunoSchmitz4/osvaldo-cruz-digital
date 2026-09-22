@@ -5,7 +5,7 @@
 // function AlgumaCoisa() {} - Função que permite construírmos
 // uma página, um componente, ou uma funcionalidade;
 export default function Home() {
-    return <>
+    return (
         <section>
             <header>
                 <h1>Osvaldo Cruz Digital</h1>
@@ -27,5 +27,5 @@ export default function Home() {
                 <p>Grêmil Estudantil</p>
             </nav>            
         </section>
-    </>
+    )
 }
