@@ -4,12 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import AppRoutes from './routes';
+import { JogoProvider } from './contexto/Jogo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRoutes />
+      <JogoProvider>
+        <AppRoutes />
+      </JogoProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

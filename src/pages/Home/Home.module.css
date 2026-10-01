@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mapa {
+    background-image: url('/src/images/Home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 48px 24px;
+    color: #ffffff;
+}
+
+.titulo {
+    margin-bottom: 32px;
+    text-align: center;
+    color: #d9ff83;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: min(94vw, 1400px);
+    margin: 0 auto;
+}
+
+.sala {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 112px;
+    padding: 24px 28px;
+    border: 2px solid rgba(217, 255, 131, 0.7);
+    border-radius: 12px;
+    background: rgba(23, 75, 45, 0.9);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 5px 0 rgba(10, 42, 25, 0.75), 0 10px 24px rgba(0, 0, 0, 0.28);
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.sala:hover,
+.sala:focus-visible {
+    background: #2f9e5b;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 0 rgba(10, 42, 25, 0.75), 0 16px 28px rgba(0, 0, 0, 0.35);
+}
+
+.sala:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+    .mapa {
+        padding: 32px 16px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.radio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.musica {
+    padding: 12px 20px;
+    border: 2px solid #e1e4ff;
+    border-radius: 999px;
+    background: #4c5292;
+    color: #ffffff;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #292e61;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.musica:hover,
+.musica:focus-visible {
+    background: #6269ad;
+    transform: translateY(-3px);
+}
+
+.musica.tocando {
+    border-color: #d9ff83;
+    background: #2f9e5b;
+    box-shadow: 0 4px 0 rgba(10, 42, 25, 0.75), 0 0 16px rgba(185, 255, 74, 0.6);
+}

@@ -13,7 +13,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -30,7 +29,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -47,7 +45,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -64,7 +61,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -81,7 +77,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -98,7 +93,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -115,7 +109,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -132,7 +125,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -149,7 +141,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -166,7 +157,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -183,7 +173,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -200,7 +189,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -217,7 +205,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
   {
@@ -234,7 +221,6 @@ export const salas = [
       pergunta: "",
       dica: "",
       resposta: "",
-      recompensa: "",
     },
   },
 ];

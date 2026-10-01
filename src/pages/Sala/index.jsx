@@ -33,30 +33,30 @@ export default function Sala() {
   }
 
   return (
-    <main
-      className={styles.tela}
-      style={sala.imagem ? { backgroundImage: `url(${sala.imagem})` } : undefined}
-    >
-      <div className={styles.canto}>
+    <main className={styles.tela}>
+      <div className={styles.conteudo}>
         <Link to="/escola" className={styles.voltar}>
           ← Voltar para a escola
         </Link>
+
         <h1 className={styles.nome}>{sala.nome}</h1>
+
+        {sala.imagem ? (
+          <img className={styles.banner} src={sala.imagem} alt={sala.nome} />
+        ) : (
+          <div className={styles.banner}>Foto da sala em breve</div>
+        )}
+
+        <Charada key={sala.id} idSala={sala.id} charada={sala.charada} />
+
         {sala.descricao && <p className={styles.descricao}>{sala.descricao}</p>}
-      </div>
 
-      <div className={styles.canto}>
-        <Painel titulo="Quem trabalha aqui" itens={sala.quemTrabalha} />
-        <Painel titulo="Quem frequenta" itens={sala.quemFrequenta} />
-      </div>
-
-      <div className={styles.canto}>
-        <Painel titulo="O que acontece" itens={sala.oQueAcontece} />
-        <Painel titulo="Feito por" itens={sala.grupo} />
-      </div>
-
-      <div className={styles.canto}>
-        <Charada charada={sala.charada} />
+        <div className={styles.paineis}>
+          <Painel titulo="Quem trabalha aqui" itens={sala.quemTrabalha} />
+          <Painel titulo="Quem frequenta" itens={sala.quemFrequenta} />
+          <Painel titulo="O que acontece" itens={sala.oQueAcontece} />
+          <Painel titulo="Feito por" itens={sala.grupo} />
+        </div>
       </div>
     </main>
   );

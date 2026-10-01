@@ -1,0 +1,56 @@
+.tela {
+	display: flex;
+	min-height: 100vh;
+	min-height: 100svh;
+	box-sizing: border-box;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 32px 20px 64px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.conteudo {
+	width: auto;
+}
+
+.acoes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+}
+
+.botaoSair {
+	min-width: 210px;
+	padding: 16px 28px;
+	border: 2px solid #e1e4ff;
+	border-radius: 12px;
+	background: #4c5292;
+	color: #ffffff;
+	cursor: pointer;
+	font: inherit;
+	font-size: 18px;
+	font-weight: 800;
+	box-shadow: 0 5px 0 #292e61, 0 8px 18px rgba(0, 0, 0, 0.3);
+	transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.botaoSair:hover,
+.botaoSair:focus-visible {
+	background: #6269ad;
+	transform: translateY(-5px) scale(1.03);
+	box-shadow: 0 9px 0 #292e61, 0 14px 24px rgba(0, 0, 0, 0.35);
+}
+
+.botaoSair:focus-visible {
+	outline: 3px solid #ffffff;
+	outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+	.tela {
+		padding-bottom: 40px;
+	}
+}
