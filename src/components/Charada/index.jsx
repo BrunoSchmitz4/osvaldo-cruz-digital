@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 import { useJogo } from "../../contexto/Jogo";
+import { salas } from "../../dados/salas";
 import Plumbob from "../Plumbob";
 import Botao from "../Botao";
 import styles from "./Charada.module.css";
 
 const cores = ["verde", "amarelo", "laranja", "vermelho"];
+const salasComCharada = salas.filter((sala) => sala.charada.pergunta);
 
 function limpar(texto) {
   return texto
@@ -24,6 +26,8 @@ export default function Charada({ idSala, charada }) {
   if (!charada || !charada.pergunta) return null;
 
   const ganhou = ganhas[idSala];
+  const posicao = salasComCharada.findIndex((sala) => sala.id === idSala);
+  const proxima = salasComCharada[posicao + 1];
   const cor = cores[Math.min(erros, cores.length - 1)];
 
   function verificar(evento) {
@@ -60,6 +64,7 @@ export default function Charada({ idSala, charada }) {
           ))}
         </div>
 
+        {proxima && <Botao para={"/sala/" + proxima.id}>Próxima sala →</Botao>}
         {terminou && <Botao para="/fim">Montar a frase final</Botao>}
       </section>
     );
