@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router";
 
 import { salas } from "../../dados/salas";
 import Charada from "../../components/Charada";
+import ComoJogar from "../../components/ComoJogar";
 import styles from "./Sala.module.css";
 
 function Painel({ titulo, itens }) {
@@ -42,20 +43,35 @@ export default function Sala() {
         <h1 className={styles.nome}>{sala.nome}</h1>
 
         {sala.imagem ? (
-          <img className={styles.banner} src={sala.imagem} alt={sala.nome} />
+          <img className={`${styles.banner} ${styles.foto}`} src={sala.imagem} alt={sala.nome} />
         ) : (
           <div className={styles.banner}>Foto da sala em breve</div>
         )}
 
-        <Charada key={sala.id} idSala={sala.id} charada={sala.charada} />
+        <div className={styles.jogo}>
+          <ComoJogar />
+          <Charada key={sala.id} idSala={sala.id} charada={sala.charada} />
+        </div>
 
-        {sala.descricao && <p className={styles.descricao}>{sala.descricao}</p>}
+        <div className={styles.rodape}>
+          {sala.personagem && (
+            <img
+              className={styles.personagem}
+              src={sala.personagem.imagem}
+              alt={sala.personagem.nome}
+            />
+          )}
 
-        <div className={styles.paineis}>
-          <Painel titulo="Quem trabalha aqui" itens={sala.quemTrabalha} />
-          <Painel titulo="Quem frequenta" itens={sala.quemFrequenta} />
-          <Painel titulo="O que acontece" itens={sala.oQueAcontece} />
-          <Painel titulo="Feito por" itens={sala.grupo} />
+          <div className={styles.informacoes}>
+            {sala.descricao && <p className={styles.descricao}>{sala.descricao}</p>}
+
+            <div className={styles.paineis}>
+              <Painel titulo="Quem trabalha aqui" itens={sala.quemTrabalha} />
+              <Painel titulo="Quem frequenta" itens={sala.quemFrequenta} />
+              <Painel titulo="O que acontece" itens={sala.oQueAcontece} />
+              <Painel titulo="Feito por" itens={sala.grupo} />
+            </div>
+          </div>
         </div>
       </div>
     </main>

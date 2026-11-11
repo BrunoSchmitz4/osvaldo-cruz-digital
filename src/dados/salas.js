@@ -1,9 +1,31 @@
+import fotoInformatica from "../images/salas/sala-informatica.svg";
+import fotoBiblioteca from "../images/salas/biblioteca.svg";
+import fotoAnfiteatro from "../images/salas/anfiteatro.svg";
+import fotoQuadra from "../images/salas/quadra.svg";
+import fotoDiretoria from "../images/salas/diretoria.svg";
+import fotoProfessores from "../images/salas/sala-professores.svg";
+import fotoCoordenacao from "../images/salas/coordenacao-pedagogica.svg";
+import fotoPatio from "../images/salas/patio.svg";
+import fotoLaboratorio from "../images/salas/laboratorio-ciencias.svg";
+import fotoCozinha from "../images/salas/cozinha.svg";
+import fotoSalaDeAula from "../images/salas/sala-de-aula.svg";
+import fotoGremio from "../images/salas/gremio-estudantil.svg";
+import fotoOrientacao from "../images/salas/orientacao-convivencia.svg";
+import fotoSecretaria from "../images/salas/secretaria.svg";
+import personagemDario from "../images/personagens/dario.png";
+import personagemArley from "../images/personagens/arley.png";
+import personagemDalila from "../images/personagens/dalila.png";
+import personagemGilson from "../images/personagens/gilson.png";
+import personagemJuliane from "../images/personagens/juliane.png";
+import personagemViviane from "../images/personagens/viviane.png";
+
 export const salas = [
   {
     id: "sala-informatica",
     nome: "Sala de Informática",
     grupo: [],
-    imagem: "",
+    imagem: fotoInformatica,
+    personagem: { nome: "Dario", imagem: personagemDario },
     posicao: { top: "", left: "" },
     descricao: "",
     quemTrabalha: ["Dario"],
@@ -20,7 +42,8 @@ export const salas = [
     id: "biblioteca",
     nome: "Biblioteca",
     grupo: [],
-    imagem: "",
+    imagem: fotoBiblioteca,
+    personagem: { nome: "Arley", imagem: personagemArley },
     posicao: { top: "", left: "" },
     descricao: "",
     quemTrabalha: ["Arley"],
@@ -37,7 +60,8 @@ export const salas = [
     id: "anfiteatro",
     nome: "Anfiteatro",
     grupo: [],
-    imagem: "",
+    imagem: fotoAnfiteatro,
+    personagem: { nome: "Dalila", imagem: personagemDalila },
     posicao: { top: "", left: "" },
     descricao: "Anfiteatro - Dalila: Bom dia popo(a).\nNo anfiteatro são feitas todas as palestras e são feitos os pós conselhos de classe.",
     quemTrabalha: [],
@@ -54,7 +78,8 @@ export const salas = [
     id: "quadra",
     nome: "Quadra",
     grupo: [],
-    imagem: "",
+    imagem: fotoQuadra,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Quadra - Junior: Bom dia de manhã.\nA quadra e campo servem para aulas de educação física e também para dias especiais, como por exemplo o dia da família e festa junina.",
     quemTrabalha: ["Junior"],
@@ -71,7 +96,8 @@ export const salas = [
     id: "diretoria",
     nome: "Diretoria",
     grupo: [],
-    imagem: "",
+    imagem: fotoDiretoria,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Olá, sou a diretora da escola. Minha função é organizar a escola, ajudar alunos e professores e garantir um bom ambiente para todos. ",
     quemTrabalha: ["Luciana e Dalila"],
@@ -88,7 +114,8 @@ export const salas = [
     id: "sala-professores",
     nome: "Sala dos Professores",
     grupo: [],
-    imagem: "",
+    imagem: fotoProfessores,
+    personagem: { nome: "Gilson", imagem: personagemGilson },
     posicao: { top: "", left: "" },
     descricao: "Bom dia, meu nome é Gilson. A sala dos professores é um pilar que sustenta a escola. Aqui é onde os professores se reúnem para discutir sobre o que é trabalhado no decorrer das aulas, alinhar os objetivos, socializar se tudo aconteceu conforme o esperado ou se devemos procurar outras estratégias. Claro, também tomamos café.",
     quemTrabalha: ["Professores"],
@@ -105,7 +132,8 @@ export const salas = [
     id: "coordenacao-pedagogica",
     nome: "Coordenação Pedagógica",
     grupo: [],
-    imagem: "",
+    imagem: fotoCoordenacao,
+    personagem: { nome: "Juliane", imagem: personagemJuliane },
     posicao: { top: "", left: "" },
     descricao: "Juliane - Bom dia, meu nome é Juliane, eu acompanho tanto os professores quanto os alunos em relação aos planejamentos e também vejo se esses planejamentos estão publicados no sistema. Analiso as notas, ajudo na parte pedagógica dos alunos, cuido dos encaminhamentos que os professores fazem e também das dificuldades e problemas de todos no geral.",
     quemTrabalha: ["Coordenada pedagógica"],
@@ -122,7 +150,8 @@ export const salas = [
     id: "patio",
     nome: "Pátio",
     grupo: [],
-    imagem: "",
+    imagem: fotoPatio,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "O pátio é um espaço de convivência, onde os alunos podem conversar. O guarda ajuda a manter a segurança e a organização, protegendo os alunos e orientando quando necessário.",
     quemTrabalha: ["Clovis"],
@@ -139,7 +168,8 @@ export const salas = [
     id: "orientacao-convivencia",
     nome: "Sala de Orientação de Convivência",
     grupo: [],
-    imagem: "",
+    imagem: fotoOrientacao,
+    personagem: { nome: "Viviane", imagem: personagemViviane },
     posicao: { top: "", left: "" },
     descricao: "Oi, eu sou a Vivi! Minha função é manter a convivência na escola, ajudar na hora do lanche, ver se está tudo em ordem, atender principalmente os alunos, cuidar dos materiais, chamar os pais para conversar, entre outras coisas. Sou um auxílio para a gestão.",
     quemTrabalha: ["Viviane"],
@@ -156,7 +186,8 @@ export const salas = [
     id: "laboratorio-ciencias",
     nome: "Laboratório de Ciências",
     grupo: [],
-    imagem: "",
+    imagem: fotoLaboratorio,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Bom dia, eu sou a Giselle. A função do laboratório é abrir um leque na mente dos alunos onde eles compreendam que a ciência também é um ramo que dá curiosidade. É um ramo necessário que sempre está evoluindo.",
     quemTrabalha: ["Giselle"],
@@ -173,7 +204,8 @@ export const salas = [
     id: "cozinha",
     nome: "Cozinha",
     grupo: [],
-    imagem: "",
+    imagem: fotoCozinha,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Olá, sou a Marilene. A cozinha é o espaço onde as merendeiras preparam a comida para os alunos. A merenda é muito importante para que todos tenham energia para estudar.",
     quemTrabalha: ["Merendeiras"],
@@ -190,7 +222,8 @@ export const salas = [
     id: "secretaria",
     nome: "Secretaria",
     grupo: [],
-    imagem: "",
+    imagem: fotoSecretaria,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Olá, meu nome é Renata. A função da secretaria da nossa escola é atender os pais e os alunos. A secretaria é muito importante para comunicar os pais e receber avisos deles, igualmente para os alunos. A secretaria também comunica acontecimentos de datas pendentes.",
     quemTrabalha: ["Dione e Renata"],
@@ -207,7 +240,8 @@ export const salas = [
     id: "sala-de-aula",
     nome: "Sala de Aula",
     grupo: [],
-    imagem: "",
+    imagem: fotoSalaDeAula,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "Salas - Jamili: Oiiiiii, que bom te ver aqui!\nAs salas de aula são importantes para o aprendizado. Os alunos estudam, fazem atividades e aprendem com os professores e colegas.",
     quemTrabalha: ["Professores"],
@@ -224,7 +258,8 @@ export const salas = [
     id: "gremio-estudantil",
     nome: "Grêmio Estudantil",
     grupo: [],
-    imagem: "",
+    imagem: fotoGremio,
+    personagem: null,
     posicao: { top: "", left: "" },
     descricao: "",
     quemTrabalha: [],

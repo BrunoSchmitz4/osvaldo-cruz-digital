@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    padding: 48px 24px;
+    padding: 48px 24px var(--folga-player, 48px);
     color: #ffffff;
 }
 

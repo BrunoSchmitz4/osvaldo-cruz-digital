@@ -4,11 +4,37 @@
   align-items: center;
   gap: 20px;
   min-height: 100vh;
-  padding: 48px 16px;
+  padding: 48px 16px var(--folga-player, 48px);
   background: radial-gradient(circle at top, var(--azul-escola), var(--azul-noite) 70%);
   color: var(--branco);
   text-align: center;
   animation: aparecer 0.5s ease both;
+}
+
+.vitoria {
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.dupla {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.personagem {
+  display: block;
+  height: min(300px, 42vw);
+  width: auto;
+  animation: fimPersonagem 0.7s ease-out 0.4s both;
+}
+
+@media (max-width: 1140px) {
+  .vitoria {
+    padding-bottom: var(--folga-player, 0);
+  }
 }
 
 .titulo {
@@ -123,6 +149,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
+}
+
+@keyframes fimPersonagem {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fimBloco {

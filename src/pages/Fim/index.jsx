@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 import { useJogo } from "../../contexto/Jogo";
+import { tocarAcerto, tocarErro } from "../../sons";
 import Plumbob from "../../components/Plumbob";
 import Botao from "../../components/Botao";
+import denize from "../../images/personagens/denize.png";
+import bruno from "../../images/personagens/bruno.png";
 import styles from "./Fim.module.css";
 
 const cores = ["verde", "amarelo", "laranja", "vermelho"];
@@ -58,8 +61,10 @@ export default function Fim() {
     );
 
     if (certa) {
+      tocarAcerto();
       setVenceu(true);
     } else {
+      tocarErro();
       setErros(erros + 1);
     }
   }
@@ -87,7 +92,7 @@ export default function Fim() {
 
   if (venceu) {
     return (
-      <main className={styles.tela}>
+      <main className={`${styles.tela} ${styles.vitoria}`}>
         <Plumbob tamanho={110} />
         <h1 className={styles.titulo}>Parabéns!</h1>
         <p className={styles.fraseFinal}>{palavras.join(" ")}</p>
@@ -96,6 +101,10 @@ export default function Fim() {
           <button className={styles.botao} onClick={jogarDeNovo}>
             Jogar de novo
           </button>
+        </div>
+        <div className={styles.dupla}>
+          <img className={styles.personagem} src={denize} alt="Denize" />
+          <img className={styles.personagem} src={bruno} alt="Bruno" />
         </div>
       </main>
     );

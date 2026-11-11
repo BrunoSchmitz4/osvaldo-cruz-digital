@@ -7,6 +7,7 @@ import Sala from "./pages/Sala";
 import Fim from "./pages/Fim";
 import NaoEncontrado from "./pages/NaoEncontrado";
 import Player from "./components/Player";
+import stylesPlayer from "./components/Player/Player.module.css";
 
 export default function AppRoutes() {
   const [musica, setMusica] = useState(null);
@@ -19,13 +20,15 @@ export default function AppRoutes() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/escola" element={<Home musica={musica} tocar={tocar} />} />
-        <Route path="/sala/:id" element={<Sala />} />
-        <Route path="/fim" element={<Fim />} />
-        <Route path="*" element={<NaoEncontrado />} />
-      </Routes>
+      <div className={musica ? stylesPlayer.comPlayer : undefined}>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/escola" element={<Home musica={musica} tocar={tocar} />} />
+          <Route path="/sala/:id" element={<Sala />} />
+          <Route path="/fim" element={<Fim />} />
+          <Route path="*" element={<NaoEncontrado />} />
+        </Routes>
+      </div>
 
       {musica && <Player key={vez} musica={musica} parar={() => setMusica(null)} />}
     </>

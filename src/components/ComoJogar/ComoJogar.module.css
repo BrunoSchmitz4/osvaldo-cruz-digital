@@ -1,0 +1,53 @@
+.balao {
+  position: relative;
+  padding: 18px;
+  border-radius: 20px;
+  background-color: var(--branco);
+  color: var(--azul-noite);
+  box-shadow: 0 6px 0 #9eed3c, 0 12px 28px rgba(0, 0, 0, 0.35);
+  animation: surgir 0.6s var(--pulo) 0.1s both;
+}
+
+.balao::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  right: -14px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 16px solid var(--branco);
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.passos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+  .balao::after {
+    top: auto;
+    right: auto;
+    bottom: -14px;
+    left: 36px;
+    border-top: 16px solid var(--branco);
+    border-right: 12px solid transparent;
+    border-bottom: 0;
+    border-left: 12px solid transparent;
+  }
+
+  .passos {
+    gap: 6px;
+  }
+}

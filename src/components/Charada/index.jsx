@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { useJogo } from "../../contexto/Jogo";
 import { salas } from "../../dados/salas";
+import { tocarAcerto, tocarErro } from "../../sons";
 import Plumbob from "../Plumbob";
 import Botao from "../Botao";
 import styles from "./Charada.module.css";
@@ -36,8 +37,10 @@ export default function Charada({ idSala, charada }) {
     if (resposta.trim() === "") return;
 
     if (limpar(resposta) === limpar(charada.resposta)) {
+      tocarAcerto();
       ganharPalavras(idSala);
     } else {
+      tocarErro();
       setErros(erros + 1);
       setResposta("");
     }
