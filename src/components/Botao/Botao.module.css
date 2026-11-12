@@ -1,7 +1,8 @@
 .botao {
 	display: inline-block;
 	min-width: 210px;
-	padding: 16px 28px;
+	min-height: 52px;
+	padding: 14px 28px;
 	border: 2px solid #e1e4ff;
 	border-radius: 12px;
 	background: #4c5292;

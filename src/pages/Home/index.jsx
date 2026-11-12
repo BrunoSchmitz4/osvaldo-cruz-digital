@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { salas } from "../../dados/salas";
 import { musicas } from "../../dados/musicas";
 import Plumbob from "../../components/Plumbob";
+import Recomecar from "../../components/Recomecar";
 import styles from "./Home.module.css";
 
 export default function Home({ musica, tocar }) {
@@ -29,6 +30,10 @@ export default function Home({ musica, tocar }) {
             {sala.nome}
           </Link>
         ))}
+      </div>
+
+      <div className={styles.rodape}>
+        <Recomecar />
       </div>
     </main>
   );

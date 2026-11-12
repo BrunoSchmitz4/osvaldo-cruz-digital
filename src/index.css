@@ -12,10 +12,21 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
+  min-height: 100vh;
+  min-height: 100svh;
   font-family: "Trebuchet MS", Arial, sans-serif;
   background-color: var(--azul-noite);
   color: var(--branco);
+}
+
+img {
+  max-width: 100%;
 }
 
 @keyframes surgir {

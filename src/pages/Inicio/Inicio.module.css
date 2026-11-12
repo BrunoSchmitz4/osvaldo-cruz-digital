@@ -1,14 +1,26 @@
 .tela {
 	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
 	min-height: 100svh;
 	box-sizing: border-box;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: center;
-	padding: 32px 20px 64px;
+	gap: clamp(28px, 7svh, 64px);
+	padding: 32px 20px 40px;
+	background-color: var(--azul-noite);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.logo {
+	display: block;
+	width: min(88vw, 620px);
+	max-height: 45svh;
+	height: auto;
+	object-fit: contain;
+	animation: surgir 0.8s var(--pulo) both;
 }
 
 .conteudo {
@@ -24,7 +36,8 @@
 
 .botaoSair {
 	min-width: 210px;
-	padding: 16px 28px;
+	min-height: 52px;
+	padding: 14px 28px;
 	border: 2px solid #e1e4ff;
 	border-radius: 12px;
 	background: #4c5292;
@@ -49,8 +62,8 @@
 	outline-offset: 4px;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 481px) {
 	.tela {
-		padding-bottom: 40px;
+		padding-bottom: 64px;
 	}
 }

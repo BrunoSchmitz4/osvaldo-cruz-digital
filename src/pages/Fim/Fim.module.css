@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   min-height: 100vh;
-  padding: 48px 16px var(--folga-player, 48px);
+  min-height: 100svh;
+  padding: 32px 16px var(--folga-player, 32px);
   background: radial-gradient(circle at top, var(--azul-escola), var(--azul-noite) 70%);
   color: var(--branco);
   text-align: center;
@@ -12,7 +13,7 @@
 }
 
 .vitoria {
-  padding-bottom: 0;
+  padding-bottom: var(--folga-player, 0);
   overflow: hidden;
 }
 
@@ -29,12 +30,6 @@
   height: min(300px, 42vw);
   width: auto;
   animation: fimPersonagem 0.7s ease-out 0.4s both;
-}
-
-@media (max-width: 1140px) {
-  .vitoria {
-    padding-bottom: var(--folga-player, 0);
-  }
 }
 
 .titulo {
@@ -56,10 +51,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: min(100%, 900px);
-  min-height: 96px;
-  padding: 20px;
+  min-height: 80px;
+  padding: 14px;
   border: 3px dashed rgba(217, 255, 131, 0.5);
   border-radius: 16px;
   background-color: rgba(11, 31, 58, 0.6);
@@ -77,7 +72,8 @@
 }
 
 .bloco {
-  padding: 12px 20px;
+  min-height: 44px;
+  padding: 10px 16px;
   border: 2px solid #e1e4ff;
   border-radius: 10px;
   background-color: var(--branco);
@@ -101,7 +97,8 @@
 
 .botao {
   min-width: 210px;
-  padding: 16px 28px;
+  min-height: 52px;
+  padding: 14px 28px;
   border: 2px solid #e1e4ff;
   border-radius: 12px;
   background: #4c5292;
@@ -133,7 +130,7 @@
 
 .fraseFinal {
   max-width: 900px;
-  padding: 24px 28px;
+  padding: 18px 20px;
   border: 3px solid rgba(217, 255, 131, 0.9);
   border-radius: 16px;
   background-color: rgba(23, 75, 45, 0.9);
@@ -149,6 +146,37 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
+}
+
+@media (min-width: 641px) {
+  .tela {
+    gap: 20px;
+    padding: 48px 16px var(--folga-player, 48px);
+  }
+
+  .vitoria {
+    padding-bottom: var(--folga-player, 0);
+  }
+
+  .campo {
+    gap: 12px;
+    min-height: 96px;
+    padding: 20px;
+  }
+
+  .bloco {
+    padding: 12px 20px;
+  }
+
+  .fraseFinal {
+    padding: 24px 28px;
+  }
+}
+
+@media (min-width: 1141px) {
+  .vitoria {
+    padding-bottom: 0;
+  }
 }
 
 @keyframes fimPersonagem {

@@ -115,7 +115,7 @@ export default function Fim() {
       <Plumbob key={erros} cor={cores[Math.min(erros, 3)]} tamanho={80} />
       <h1 className={styles.titulo}>Desafio final</h1>
       <p className={styles.texto}>
-        Monte a frase com as palavras que você ganhou. Clique ou arraste os blocos.
+        Monte a frase com as palavras que você ganhou. Toque nos blocos (ou arraste) para montar.
       </p>
 
       <div
