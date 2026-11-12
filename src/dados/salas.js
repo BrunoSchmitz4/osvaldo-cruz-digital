@@ -68,7 +68,7 @@ export const salas = [
     quemFrequenta: ["Alunos e professores"],
     oQueAcontece: ["Apresentações e avisos importantes"],
     charada: {
-      pergunta: "Agora iremos nos dirigir onde vivemos o esporte do dia a dia. Que local sou?",
+      pergunta: "Agora iremos nos dirigir para onde vivemos o esporte do dia a dia. Que local sou?",
       dica: "",
       resposta: "quadra",
       recompensa: "a",
@@ -104,7 +104,7 @@ export const salas = [
     quemFrequenta: ["Luciana, Dalila, alunos e pais"],
     oQueAcontece: ["Broncas"],
     charada: {
-      pergunta: "Aqui tá toda a instrução que recebemos, aqui há pessoas importantes para nossos cérebros... que local eu sou?",
+      pergunta: "Aqui está toda a instrução que recebemos; aqui há pessoas importantes para nossos cérebros... Que local eu sou?",
       dica: "",
       resposta: "sala dos professores",
       recompensa: "",
@@ -158,7 +158,7 @@ export const salas = [
     quemFrequenta: ["Segurança, professores e alunos"],
     oQueAcontece: ["Estacionam os carros"],
     charada: {
-      pergunta: "Se de materiais você precisar, aqui você pode encontrar, se de auxílio necessitar, aqui você deve buscar… Que local sou?",
+      pergunta: "Se de materiais você precisar, aqui você pode encontrar; se de auxílio necessitar, aqui você deve buscar… Que local sou?",
       dica: "",
       resposta: "sala de orientação de convivência",
       recompensa: "somos",
@@ -194,7 +194,7 @@ export const salas = [
     quemFrequenta: ["Alunos e professores"],
     oQueAcontece: ["Aulas práticas de ciências, biologia e química"],
     charada: {
-      pergunta: "Aqui o fogo dança e a panela canta, o cheiro que escapa faz a forme aumentar. Não te aula, não tem prova, mas todo mundo quer passar por aqui na hora do lanche. Que lugar eu sou?",
+      pergunta: "Aqui o fogo dança e a panela canta, o cheiro que escapa faz a fome aumentar. Não tem aula, não tem prova, mas todo mundo quer passar por aqui na hora do lanche. Que lugar eu sou?",
       dica: "",
       resposta: "cozinha",
       recompensa: "",
@@ -212,7 +212,7 @@ export const salas = [
     quemFrequenta: ["Merendeiras e alunos"],
     oQueAcontece: ["As merendeiras fazem a comida"],
     charada: {
-      pergunta: "Aqui é onde pais, professores e alunos podem retirar dúvidas e resolver problemas. Que local sou?",
+      pergunta: "Aqui é onde pais, professores e alunos podem tirar dúvidas e resolver problemas. Que local sou?",
       dica: "",
       resposta: "secretaria",
       recompensa: "",
@@ -248,7 +248,7 @@ export const salas = [
     quemFrequenta: ["Alunos e professores"],
     oQueAcontece: ["Aulas"],
     charada: {
-      pergunta: "Aqui os alunos viram um pouco autoridade, organizam festas, brigam por ideias, tomam decisão. Não é sala de aula nem secretaria, é onde a voz dos estudantes ganham corpo e opinião. Que lugar sou eu?",
+      pergunta: "Aqui os alunos viram um pouco autoridade, organizam festas, brigam por ideias, tomam decisões. Não é sala de aula nem secretaria: é onde a voz dos estudantes ganha corpo e opinião. Que lugar sou eu?",
       dica: "",
       resposta: "Grêmio estudantil",
       recompensa: "estrutura",
